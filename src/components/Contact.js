@@ -13,24 +13,13 @@ const Contact = ({ data }) => {
         <>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar
-                        alt={data.name}
-                        src={data.photo}
-                        sx={{ width: 64, height: 64 }}
-                    ></Avatar>
+                    <Avatar alt={data.name} src={data.photo} sx={{ width: 64, height: 64 }}></Avatar>
                 </ListItemAvatar>
-                <ListItemText
-                    primary={
-                        <Typography>{data.name}</Typography>
-                    }
-                    secondary={
-                        <>
-                            <Typography>{data.phone}</Typography>
-                            <Typography>{data.email}</Typography>
-                        </>
-                    }
-                    sx={{ ml: 2 }}
-                ></ListItemText>
+                <ListItemText sx={{ ml: 2 }}>
+                    <Typography style={{ fontWeight: 600 }}>{data.name}</Typography>
+                    <Typography>{data.phone}</Typography>
+                    <Typography>{data.email}</Typography>
+                </ListItemText>
             </ListItem>
             <Divider variant="middle" />
         </>
